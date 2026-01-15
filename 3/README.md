@@ -1,6 +1,14 @@
 ## Настройка проекта
 
-1.  **Установите зависимости Composer:**
+1.  **Скачайте `composer.phar`:**
+    ```bash
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+    ```
+    Эта команда скачает `composer.phar` в корневую директорию проекта.
+
+2.  **Установите зависимости Composer:**
     Используйте локальный исполняемый файл `composer.phar` для установки зависимостей и генерации автозагрузчика:
     ```bash
     php composer.phar dump-autoload
